@@ -37,7 +37,6 @@ const Users = [
   },
 ];
 
-
 // Add training key - value
 let training = Users.forEach((value) =>
   value.position === "Associate Software Engineer"
@@ -47,6 +46,7 @@ let training = Users.forEach((value) =>
 
 // Filter object
 const search = Users.filter((user) => {
-  return user.isTraining === false;
+  // 👇🏻 Change depending on what you want to filter
+  return user.name === "Simon";
 });
 console.log(search);

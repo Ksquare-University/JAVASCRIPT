@@ -1,5 +1,5 @@
 // Objects
-const Users = [
+const users = [
   {
     id: 1,
     name: "Simon",
@@ -38,15 +38,14 @@ const Users = [
 ];
 
 // Add training key - value
-let training = Users.forEach((value) =>
-  value.position === "Associate Software Engineer"
-    ? (value.isTraining = true)
-    : (value.isTraining = false)
+users.forEach((user) =>
+  user.position === "Associate Software Engineer"
+    ? (user.isTraining = true)
+    : (user.isTraining = false)
 );
 
 // Filter object
-const search = Users.filter((user) => {
-  // 👇🏻 Change depending on what you want to filter
-  return user.name === "Simon";
-});
-console.log(search);
+const search = (attr, value) =>
+  console.log(users.filter((user) => user[attr] === value));
+
+search("name", "María");

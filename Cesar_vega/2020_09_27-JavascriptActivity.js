@@ -11,6 +11,11 @@ class user{
 }
 create_user = function(id,name,last_name,email,position){
     let current_user = new user(id,name,last_name,email,position);
+    if(current_user.position == "Associate Software Engineer"){
+        current_user.is_training = true;
+    } else{
+        current_user.is_training = false;
+    }
     user_list.push(current_user);
     current_id += 1;
 }
@@ -22,15 +27,6 @@ let user_2 = create_user(current_id,"Karla","Arena","KarlaA@KSq.com","Software E
 let user_3 = create_user(current_id,"Carolina","Rodriguez","CarolinaR@KSq.com","Associate Software Engineer");
 let user_4 = create_user(current_id,"Ana","Sanchez","AnaS@KSq.com","Associate Software Engineer");
 let user_5 = create_user(current_id,"Andres","Sanchez","AndresS@KSq.com","Associate Software Engineer");
-
-
-user_list.forEach(user => { 
-    if(user.position == "Associate Software Engineer"){
-        user.is_training = true;
-    } else{
-        user.is_training = false;
-    }
-}); 
 
 //console.log(user_list);
 

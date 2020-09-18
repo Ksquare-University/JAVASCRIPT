@@ -1,4 +1,4 @@
-let eployeeList = [
+const eployeeList = [
     {
         id: 1,
         name: "Alex",
@@ -46,17 +46,9 @@ eployeeList.forEach(elem => {
 });
 
 
-
-let empIsTraining = (arr) => {
-
-    const result = [];
-
-    for (let item of arr) {
-        if (item.isTraining == true) {
-            result.push(item.name)
-        }
-    } return result
+const showEmployee = (item, filter, arr) => {
+    return arr.filter(employee => employee[item] == filter)
 }
 
-empIsTraining(eployeeList)
-
+console.log(showEmployee("isTraining", true, eployeeList));
+//showEmployee("name", "Alex", eployeeList)

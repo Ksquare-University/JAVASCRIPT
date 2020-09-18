@@ -1,4 +1,4 @@
-const eployeeList = [
+const employeeList = [
     {
         id: 1,
         name: "Alex",
@@ -37,18 +37,18 @@ const eployeeList = [
     }
 ]
 
-eployeeList.forEach(elem => {
-    if (elem.position === "Associate Software Engineer") {
-        elem.isTraining = true;
+eployeeList.forEach(employee => {
+    if (employee.position === "Associate Software Engineer") {
+        employee.isTraining = true;
     } else {
-        elem.isTraining = false;
+        employee.isTraining = false;
     }
 });
 
 
-const showEmployee = (item, filter, arr) => {
-    return arr.filter(employee => employee[item] == filter)
+const showEmployee = (characteristic, filter, arr) => {
+    return arr.filter(employee => employee[characteristic] == filter)
 }
 
-console.log(showEmployee("isTraining", true, eployeeList));
+console.log(showEmployee("isTraining", true, employeeList));
 //showEmployee("name", "Alex", eployeeList)

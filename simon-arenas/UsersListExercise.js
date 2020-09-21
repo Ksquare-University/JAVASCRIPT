@@ -48,4 +48,4 @@ users.forEach((user) =>
 const search = (attr, value) =>
   console.log(users.filter((user) => user[attr] === value));
 
-search("name", "María");
+search("id", 5);
